@@ -1,0 +1,155 @@
+#sidebar{
+	float:right;
+	width:50%;
+	background: rgb(51, 59, 51);
+	color:rgb(111, 151, 117);
+	padding:20px;
+	box-sizing:  content-box ;
+}
+.nav-bar {
+	width: 100%;
+	background-color: rgba(253, 253, 253, 0.705);
+	overflow: auto;
+  }
+  
+  .nav-bar a {
+	float: left;
+	width: 20%;
+	text-align: center;
+	padding: 12px 0;
+	transition: all 0.3s ease;
+	color: white;
+	font-size: 36px;
+  }
+  
+  
+  
+  @media screen and (max-width: 500px) {
+	.navbar a {
+	  float: none;
+	  display: block;
+	}}
+	.abt {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2.5rem;
+		max-width: 68.75rem;
+		margin: auto;
+	  }
+	  .abt img {
+		height: 37.5rem;
+		width: 37.5rem;
+	  }
+	  
+	  .bio {
+		width: 25rem;
+		padding: 0.625rem;
+		border-radius: 6px;
+		box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+	  }
+	  
+	  .bio h1 {
+		margin-bottom: var(--bottom-margin);
+	  }
+	
+	  
+	  
+	  * {
+		box-sizing: border-box;
+	  }
+	  
+	  body {
+		background-color: #754646;
+		padding: 20px;
+		font-family: Arial;
+	  }
+	  
+	  /* Center website */
+	  .main {
+		max-width: 1300px;
+		margin: auto;
+	  }
+	  
+	  h1 {
+		font-size: 40px;
+		word-break: break-all;
+	  }
+	  
+	  .row {
+		margin: 8px -16px;
+	  }
+	  
+	  /* Add padding BETWEEN each column (if you want) */
+	  .row,
+	  .row > .column {
+		padding: 8px;
+	  }
+	  
+	  .column {
+		float: left;
+		width: 33%;
+	  }
+	  .projects {
+		background-color:var(--bg-color);
+		padding: 32px 0;
+		margin-top: 2rem;
+		text-align: center;
+	  }
+	  /* Clear floats after rows */
+	  .row:after {
+		content: "";
+		display: table;
+		clear: both;
+	  }
+	  
+	  /* Content */
+	  .content {
+		background-color: rgb(0, 0, 0);
+		padding: 10px;
+	  }
+	  
+	  
+	  @media screen and (max-width: 600px) {
+		.column {
+		  width: 100%;
+		}
+	  }
+	  .contact {
+		margin-top: 2rem;
+	  }
+	  
+	  .contact h1 {
+		text-align: center;
+		margin-bottom: var(--bottom-margin-2);
+	  }
+	  
+	  .contact-form-container {
+		max-width: 40.75rem;
+		margin: 0 auto;
+		padding: 0.938rem;
+		border-radius: 5px;
+		box-shadow: 0 3px 10px var(--secondary-shadow);
+	  }
+	  .contact-form-container label {
+		line-height: 2.7em;
+		font-weight: var(--bold-font);
+		color: var(--primary-color);
+	  }
+	  
+	  .contact-form-container textarea {
+		min-height: 6.25rem;
+		font-size: 14px;
+	  }
+	  
+	  .submit-btn {
+		width: 100%;
+		padding: 10px;
+		margin: 10px 0;
+		background-color: rgb(55, 185, 120);
+		border: 2px solid var(--primary-color);
+		border-radius: 5px;
+		font-size: 1rem;
+		font-weight: var(--bold-font);
+		transition: var(--transition);
+	  }

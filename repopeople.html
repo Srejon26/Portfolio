@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Repo_People</title>
+	<!-----css---->
+	<style>
+		body{
+			background-color: white;
+		}
+        button{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           border-width: 2px;
+		   background-color: white;
+        }
+
+		.userinfo{
+		background-color: rgb(224, 221, 221);
+			padding: 10px;
+			margin: 10px;
+			width: 80%;
+            display: inline-flex;
+		}
+		 img{
+			margin-top: 20px;
+		}
+	    ul{
+		  list-style-type: none;
+		}
+
+		 li{
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		  font-weight: normal;
+		  font-size: 20px;
+		  line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	
+	
+	<button type="button" onclick="loadDoc()">load Github Users</button>
+	<h1>Github Users</h1>
+	<div id="data"></div>
+
+
+	<script>
+		function loadDoc(){
+			var xhttp=new XMLHttpRequest();
+			xhttp.onreadystatechange=function(){
+			if(this.readyState==4 && this.status==200){
+				var people = JSON.parse(this.responseText)
+				var output= ' ';
+				 for(var i in people){
+				 output +=
+				 '<div class="userinfo">' +
+					 '<img src="'+people[i].avatar_url+'" width="200px" height="200px">' +
+					 '<ul>' +
+						 '<li>ID  : '+people[i].id+'</li>' +
+						 '<li>Login  : '+people[i].login+'</li>' +
+						 '<li>Repos  : '+people[i].repos_url+'</li>'+
+						 '<li>Html URL : '+people[i].html_url+'</li>'+
+						 '<li>Subscriptions URL : '+people[i].subscriptions_url+'</li>'+
+					 '</ul>'+
+				 '</div>';
+
+				 	
+				}
+            
+				document.getElementById("data").innerHTML=output;}
+			};
+			xhttp.open('GET','https://api.github.com/users',true);
+			xhttp.send();
+		}
+	</script>
+</body>
+</html>
